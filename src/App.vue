@@ -1,10 +1,21 @@
-<script setup></script>
+<script setup>
+import { useRoute, useRouter } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+
+const goToHomePage = () => {
+    if (route.path != "/") {
+        router.push("/");
+    }
+};
+</script>
 
 <template>
     <v-app>
         <v-app-bar>
             <!-- Logo or Title -->
-            <v-app-bar-title>My store</v-app-bar-title>
+            <v-app-bar-title @click="goToHomePage">My store</v-app-bar-title>
             <!-- Spacer to push items to the right -->
             <v-spacer />
 

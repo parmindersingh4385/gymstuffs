@@ -44,4 +44,5 @@ const goToProduct = (productUrl) => {
             </v-sheet>
         </v-slide-group-item>
     </v-slide-group>
+    <h2>Popular stores</h2>
 </template>
