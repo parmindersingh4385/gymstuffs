@@ -13,6 +13,11 @@ const productUrls = ref([
     { id: 8, title: "Gloves", product_url: "/products/gloves" },
     { id: 9, title: "Wrist bands", product_url: "/products/wristbands" },
     { id: 10, title: "Skipping ropes", product_url: "/products/skippingropes" },
+    { id: 11, title: "Shakers", product_url: "/products/shakers" },
+    { id: 12, title: "Rollers", product_url: "/products/rollers" },
+    { id: 13, title: "Gloves", product_url: "/products/gloves" },
+    { id: 14, title: "Wrist bands", product_url: "/products/wristbands" },
+    { id: 15, title: "Skipping ropes", product_url: "/products/skippingropes" },
 ]);
 
 const images = ref([
@@ -64,6 +69,30 @@ const images = ref([
         src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
         name: "Image 12",
     },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 13",
+    },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 14",
+    },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 15",
+    },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 16",
+    },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 17",
+    },
+    {
+        src: "https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg",
+        name: "Image 18",
+    },
 ]);
 
 const router = useRouter();
@@ -74,42 +103,58 @@ const goToProduct = (productUrl) => {
 </script>
 
 <template>
-    <v-slide-group show-arrows>
-        <v-slide-group-item
-            v-for="(product, index) in productUrls"
-            :key="index"
+    <v-container fluid  class="d-flex justify-center">
+        <v-sheet
+            class="mx-auto text-center py-5"
+            max-width="100%"
         >
-            <v-sheet
-                class="circle-layout d-flex flex-column justify-center align-center"
-                @click="goToProduct(product.product_url)"
-            >
-                <v-icon size="130">
-                    <v-img
-                        src="https://asset20.ckassets.com/resources/image/category/fashion-offers-4199-1674024044.png"
-                        alt="Profile"
-                        width="100"
-                        height="100"
-                        rounded="circle"
-                    />
-                </v-icon>
-                {{ product.title }}
-            </v-sheet>
-        </v-slide-group-item>
-    </v-slide-group>
-    <h2>Popular stores</h2>
-    <v-container>
-        <v-row>
-            <v-col v-for="(image, index) in images" :key="index" cols="3">
-                <v-card>
-                    <v-img
-                        :src="image.src"
-                        aspect-ratio="1"
-                        cover
-                        style="width: 270px; height: 120px"
-                    ></v-img>
-                    <v-card-title>{{ image.name }}</v-card-title>
-                </v-card>
-            </v-col>
-        </v-row>
+            <v-slide-group show-arrows >
+                <v-slide-group-item
+                    v-for="(product, index) in productUrls"
+                    :key="index"
+                    class="pa-4 align-center"
+                >
+                    <v-sheet
+                        class="p-3 d-flex flex-column justify-center align-center mx-2"
+                        @click="goToProduct(product.product_url)"
+                    >
+                        <v-icon class="p-0 m-0" size="117">
+                            <v-img
+                                src="https://asset20.ckassets.com/resources/image/category/fashion-offers-4199-1674024044.png"
+                                alt="Profile"
+                                height="130"
+                                rounded="circle"
+                                cover
+                            />
+                        </v-icon>
+                        {{ product.title }}
+                    </v-sheet>
+                </v-slide-group-item>
+            </v-slide-group>
+        </v-sheet>
     </v-container>
+    
+    <div class="px-5">
+        <v-container fluid >
+            <v-row>
+                <v-col cols="12">
+                    <h2>Popular stores</h2>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col v-for="(image, index) in images" :key="index" cols="12" sm="6" md="4" lg="2">
+                    <v-card>
+                        <v-img
+                            :src="image.src"
+                            aspect-ratio="1"
+                            cover
+                           
+                        />
+                        <v-card-title>{{ image.name }}</v-card-title>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </div>
 </template>
+
