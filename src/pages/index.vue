@@ -127,7 +127,7 @@ const goToProduct = (productUrl) => {
                                 cover
                             />
                         </v-icon>
-                        {{ product.title }}
+                        <p class="text-body-2">{{ product.title }}</p>
                     </v-sheet>
                 </v-slide-group-item>
             </v-slide-group>
@@ -138,18 +138,17 @@ const goToProduct = (productUrl) => {
         <v-container fluid >
             <v-row>
                 <v-col cols="12">
-                    <h2>Popular stores</h2>
+                    <p class="text-h5 font-weight-light">Popular stores</p>
                 </v-col>
             </v-row>
             <v-row>
-                <v-col v-for="(image, index) in images" :key="index" cols="12" sm="6" md="4" lg="2">
-                    <v-card>
-                        <v-img
-                            :src="image.src"
-                            aspect-ratio="1"
-                            cover
-                           
-                        />
+                <v-col class="position-relative" v-for="(image, index) in images" :key="index" cols="12" sm="6" md="4" lg="2">
+                    <v-card class="pa-4 h-100">
+                        <div class="w-50 mx-auto imgHeight d-flex align-center justify-center">
+                            <v-img
+                                :src="image.src"            
+                            />
+                        </div>
                         <v-card-title>{{ image.name }}</v-card-title>
                     </v-card>
                 </v-col>
