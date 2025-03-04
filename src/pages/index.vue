@@ -23,8 +23,8 @@ const productUrls = ref([
 const storeUrls = ref([
     {
         src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        name: "Lifelong",
+        store_id: "lifelong",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -32,9 +32,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -42,9 +42,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -52,9 +52,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -62,9 +62,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -72,9 +72,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -82,9 +82,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -92,9 +92,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
@@ -102,9 +102,9 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
-        name: "Tlismi",
-        store_id: "tlismi",
+        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        name: "Boldfit",
+        store_id: "boldfit",
     },
     {
         src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
