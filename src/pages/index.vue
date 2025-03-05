@@ -177,7 +177,7 @@ const goToStore = (storeId) => {
                         >
                             <v-img :src="store.src" />
                         </div>
-                        <v-card-title>{{ store.name }}</v-card-title>
+                        <v-card-title class="text-center text-subtitle-1 font-weight-regular">{{ store.name }}</v-card-title>
                     </v-card>
                 </v-col>
             </v-row>
