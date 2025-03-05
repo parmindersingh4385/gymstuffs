@@ -14,7 +14,9 @@ const goToHomePage = () => {
 <template>
     <v-app>
         <v-app-bar>
-            
+            <template v-slot:prepend>
+                <v-app-bar-nav-icon class="ms-5"></v-app-bar-nav-icon>
+            </template>
             <!-- Logo or Title -->
             <v-app-bar-title @click="goToHomePage">My store</v-app-bar-title>
             <!-- Spacer to push items to the right -->
