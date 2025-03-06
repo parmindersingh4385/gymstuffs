@@ -125,7 +125,7 @@ const goToStore = (storeId) => {
 </script>
 
 <template>
-    <v-container fluid class="d-flex justify-center">
+    <v-container fluid class="d-flex justify-center px-0">
         <v-sheet class="mx-auto text-center py-5" max-width="100%">
             <v-slide-group show-arrows>
                 <v-slide-group-item
@@ -153,8 +153,8 @@ const goToStore = (storeId) => {
         </v-sheet>
     </v-container>
 
-    <div class="px-5">
-        <v-container fluid>
+    
+        <v-container fluid class="px-3 px-md-5">
             <v-row>
                 <v-col cols="12">
                     <p class="text-h5 font-weight-light">Popular stores</p>
@@ -173,17 +173,14 @@ const goToStore = (storeId) => {
                 >
                     <v-card class="pa-4 h-100">
                         <div
-                            class="w-50 mx-auto imgHeight d-flex align-center justify-center"
+                            class=" d-flex align-center justify-center"
                         >
-                            <v-img :src="store.src" />
+                            <v-img :src="store.src" class="w-100 h-100"/>
                         </div>
-                        <v-card-title
-                            class="text-center text-subtitle-1 font-weight-regular"
-                            >{{ store.name }}</v-card-title
-                        >
+                        <v-btn color="primary" variant="plan" class="px-0 d-block text-none  text-wrap py-2 fs-subtitle-1"  >{{ store.name }} </v-btn>
+                        <v-btn color="primary" cl block size="large">Upto 15% cashback</v-btn>
                     </v-card>
                 </v-col>
             </v-row>
         </v-container>
-    </div>
 </template>

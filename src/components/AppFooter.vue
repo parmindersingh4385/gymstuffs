@@ -1,18 +1,18 @@
 <template>
-  <v-footer height="40" app>
+  <v-footer app class="justify-center">
     <a
       v-for="item in items"
       :key="item.title"
       :href="item.href"
       :title="item.title"
-      class="d-inline-block mx-2 social-link"
+      class="d-inline-block mx-5 social-link"
       rel="noopener noreferrer"
       target="_blank"
     >
-      <v-icon :icon="item.icon" :size="item.icon === '$vuetify' ? 24 : 16" />
+      <v-icon :icon="item.icon"  size="30" />
     </a>
 
-    <div
+    <!-- <div
       class="text-caption text-disabled"
       style="position: absolute; right: 16px"
     >
@@ -27,17 +27,13 @@
       >
         MIT License
       </a>
-    </div>
+    </div> -->
   </v-footer>
 </template>
 
 <script setup>
 const items = [
-  {
-    title: "Vuetify Documentation",
-    icon: `$vuetify`,
-    href: "https://vuetifyjs.com/",
-  },
+ 
   {
     title: "Vuetify Support",
     icon: "mdi-shield-star-outline",
