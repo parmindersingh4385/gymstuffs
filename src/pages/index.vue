@@ -139,7 +139,7 @@ const goToStore = (storeId) => {
                     >
                         <v-icon class="p-0 m-0" size="117">
                             <v-img
-                                src="https://asset20.ckassets.com/resources/image/category/fashion-offers-4199-1674024044.png"
+                                src="https://buykaro.com/cdn/shop/files/Mask_group_5_d77775c1-7ea8-4781-bdd9-67f7e8c6a93e_large.png?v=1731920247"
                                 alt="Profile"
                                 height="130"
                                 rounded="circle"
@@ -153,34 +153,38 @@ const goToStore = (storeId) => {
         </v-sheet>
     </v-container>
 
-    
-        <v-container fluid class="px-3 px-md-5">
-            <v-row>
-                <v-col cols="12">
-                    <p class="text-h5 font-weight-light">Popular stores</p>
-                </v-col>
-            </v-row>
-            <v-row>
-                <v-col
-                    class="position-relative"
-                    v-for="(store, index) in storeUrls"
-                    :key="index"
-                    cols="12"
-                    sm="6"
-                    md="4"
-                    lg="2"
-                    @click="goToStore(store.store_id)"
-                >
-                    <v-card class="pa-4 h-100">
-                        <div
-                            class=" d-flex align-center justify-center"
-                        >
-                            <v-img :src="store.src" class="w-100 h-100"/>
-                        </div>
-                        <v-btn color="primary" variant="plan" class="px-0 d-block text-none  text-wrap py-2 fs-subtitle-1"  >{{ store.name }} </v-btn>
-                        <v-btn color="primary" cl block size="large">Upto 15% cashback</v-btn>
-                    </v-card>
-                </v-col>
-            </v-row>
-        </v-container>
+    <v-container fluid class="px-3 px-md-5">
+        <v-row>
+            <v-col cols="12">
+                <p class="text-h5 font-weight-light">Popular stores</p>
+            </v-col>
+        </v-row>
+        <v-row>
+            <v-col
+                class="position-relative"
+                v-for="(store, index) in storeUrls"
+                :key="index"
+                cols="12"
+                sm="6"
+                md="4"
+                lg="2"
+                @click="goToStore(store.store_id)"
+            >
+                <v-card class="pa-4 h-100">
+                    <div class="d-flex align-center justify-center">
+                        <v-img :src="store.src" class="w-100 h-100" />
+                    </div>
+                    <v-btn
+                        color="primary"
+                        variant="plan"
+                        class="px-0 d-block text-none text-wrap py-2 fs-subtitle-1"
+                        >{{ store.name }}
+                    </v-btn>
+                    <v-btn color="primary" cl block size="large"
+                        >Upto 15% cashback</v-btn
+                    >
+                </v-card>
+            </v-col>
+        </v-row>
+    </v-container>
 </template>
