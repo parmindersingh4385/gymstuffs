@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import GlovesView from "@/views/products/GlovesView.vue";
+</script>
 
-<template>Gloves.....................</template>
+<template><GlovesView></GlovesView></template>

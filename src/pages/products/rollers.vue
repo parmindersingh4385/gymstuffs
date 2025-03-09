@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import RollersView from "@/views/products/RollersView.vue";
+</script>
 
-<template>Rollers.....................</template>
+<template><RollersView></RollersView></template>

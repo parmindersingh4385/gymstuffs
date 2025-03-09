@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import SkippingRopesView from "@/views/products/SkippingRopesView.vue";
+</script>
 
-<template>Skipping ropes.....................</template>
+<template><SkippingRopesView></SkippingRopesView></template>

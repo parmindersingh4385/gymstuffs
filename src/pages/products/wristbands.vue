@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import WristBandsView from "@/views/products/WristBandsView.vue";
+</script>
 
-<template>Wrist bands.....................</template>
+<template><WristBandsView></WristBandsView></template>

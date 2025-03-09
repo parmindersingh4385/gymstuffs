@@ -1,3 +1,5 @@
-<script setup></script>
+<script setup>
+import ShakersView from "@/views/products/ShakersView.vue";
+</script>
 
-<template>Shakers.....................</template>
+<template><ShakersView></ShakersView></template>
