@@ -15,10 +15,14 @@ const goToHomePage = () => {
     <v-app>
         <v-app-bar>
             <template v-slot:prepend>
-                <v-app-bar-nav-icon class="ms-sm-1 ms-md-5"></v-app-bar-nav-icon>
+                <v-app-bar-nav-icon
+                    class="ms-sm-1 ms-md-5"
+                ></v-app-bar-nav-icon>
             </template>
             <!-- Logo or Title -->
-            <v-app-bar-title @click="goToHomePage" class="cursor-pointer">My store</v-app-bar-title>
+            <v-app-bar-title @click="goToHomePage" class="cursor-pointer"
+                >GymStuffs</v-app-bar-title
+            >
             <!-- Spacer to push items to the right -->
             <v-spacer />
 
@@ -26,7 +30,11 @@ const goToHomePage = () => {
             <div class="mr-sm-2 mr-md-5">
                 <v-menu>
                     <template #activator="{ props }">
-                        <v-avatar color="surface-variant" sizes="30"  v-bind="props">
+                        <v-avatar
+                            color="surface-variant"
+                            sizes="30"
+                            v-bind="props"
+                        >
                             <img
                                 src="https://randomuser.me/api/portraits/men/45.jpg"
                                 alt="User"
