@@ -104,16 +104,15 @@ const products = [
 </script>
 
 <template>
-   
     <v-container fluid>
         <v-row>
             <v-col>
                 <v-img
-                class="rounded"
-                src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
-                alt="Profile"
-                cover
-            />
+                    class="rounded"
+                    src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
+                    alt="Profile"
+                    cover
+                />
             </v-col>
         </v-row>
         <v-row>

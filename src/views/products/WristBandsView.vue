@@ -104,17 +104,17 @@ const products = [
 </script>
 
 <template>
-    <v-sheet>
-        <v-icon class="p-0 m-0" size="200">
-            <v-img
-                src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
-                alt="Profile"
-                height="130"
-                cover
-            />
-        </v-icon>
-    </v-sheet>
-    <v-container>
+    <v-container fluid>
+        <v-row>
+            <v-col>
+                <v-img
+                    class="rounded"
+                    src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
+                    alt="Profile"
+                    cover
+                />
+            </v-col>
+        </v-row>
         <v-row>
             <v-col
                 v-for="(product, index) in products"
