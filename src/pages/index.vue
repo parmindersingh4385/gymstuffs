@@ -166,8 +166,7 @@ const goToStore = (storeId) => {
                 :key="index"
                 cols="12"
                 sm="6"
-                md="4"
-                lg="2"
+                md="3"
                 @click="goToStore(store.store_id)"
             >
                 <v-card class="pa-4 h-100">
