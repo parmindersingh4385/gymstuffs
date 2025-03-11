@@ -125,65 +125,69 @@ const goToStore = (storeId) => {
 </script>
 
 <template>
-    <v-container fluid class="d-flex justify-center px-0">
-        <v-sheet class="mx-auto text-center py-5" max-width="100%">
-            <v-slide-group show-arrows>
-                <v-slide-group-item
-                    v-for="(product, index) in productUrls"
-                    :key="index"
-                    class="pa-4 align-center"
-                >
-                    <v-sheet
-                        class="p-3 d-flex flex-column justify-center align-center mx-2"
-                        @click="goToProduct(product.product_url)"
+    <div class="px-0 px-md-15">
+        <v-container fluid class="d-flex justify-center px-0">
+            <v-sheet class="mx-auto text-center py-5" max-width="100%">
+                <v-slide-group show-arrows>
+                    <v-slide-group-item
+                        v-for="(product, index) in productUrls"
+                        :key="index"
+                        class="pa-4 align-center"
                     >
-                        <v-icon class="p-0 m-0" size="117">
-                            <v-img
-                                src="https://buykaro.com/cdn/shop/files/Mask_group_5_d77775c1-7ea8-4781-bdd9-67f7e8c6a93e_large.png?v=1731920247"
-                                alt="Profile"
-                                height="130"
-                                rounded="circle"
-                                cover
-                            />
-                        </v-icon>
-                        <p class="text-body-2">{{ product.title }}</p>
-                    </v-sheet>
-                </v-slide-group-item>
-            </v-slide-group>
-        </v-sheet>
-    </v-container>
+                        <v-sheet
+                            class="p-3 d-flex flex-column justify-center align-center mx-2"
+                            @click="goToProduct(product.product_url)"
+                        >
+                            <div class="p-0 m-0 imageArea" >
+                                <v-img
+                                    src="https://buykaro.com/cdn/shop/files/Mask_group_5_d77775c1-7ea8-4781-bdd9-67f7e8c6a93e_large.png?v=1731920247"
+                                    alt="Profile"
+                                    height="130"
+                                    rounded="circle"
+                                    cover
+                                />
+                            </div>
+                            <p class="text-subtitle-1 font-weight-bold">{{ product.title }}</p>
+                        </v-sheet>
+                    </v-slide-group-item>
+                </v-slide-group>
+            </v-sheet>
+        </v-container>
 
-    <v-container fluid class="px-3 px-md-5">
-        <v-row>
-            <v-col cols="12">
-                <p class="text-h5 font-weight-light">Popular stores</p>
-            </v-col>
-        </v-row>
-        <v-row>
-            <v-col
-                class="position-relative"
-                v-for="(store, index) in storeUrls"
-                :key="index"
-                cols="12"
-                sm="6"
-                md="3"
-                @click="goToStore(store.store_id)"
-            >
-                <v-card class="pa-4 h-100">
-                    <div class="d-flex align-center justify-center">
-                        <v-img :src="store.src" class="w-100 h-100" />
-                    </div>
-                    <v-btn
-                        color="primary"
-                        variant="plan"
-                        class="px-0 d-block text-none text-wrap py-2 fs-subtitle-1"
-                        >{{ store.name }}
-                    </v-btn>
-                    <v-btn color="primary" cl block size="large"
-                        >Upto 15% cashback</v-btn
-                    >
-                </v-card>
-            </v-col>
-        </v-row>
-    </v-container>
+        <v-container fluid class="px-3 px-md-5">
+            <v-row>
+                <v-col cols="12" class="pb-0">
+                    <p class="text-h6 font-weight-bold">Popular stores</p>
+                </v-col>
+            </v-row>
+            <v-row>
+                <v-col
+                    class="position-relative "
+                    v-for="(store, index) in storeUrls"
+                    :key="index"
+                    cols="12"
+                    sm="6"
+                    md="3"
+                    @click="goToStore(store.store_id)"
+                >
+                    <v-card class="pa-0 h-100 elevation-0 border rounded-lg">
+                        <div class="productImg">
+                            <v-img :src="store.src"/>
+                        </div>
+                        <div class="px-4 py-2 bg-grey-lighten-4">
+                            <p class="text-caption mb-1 text-grey"><!-- {{ store.name }} --> Bombay Shaving Company</p>
+                            <p class="mb-2 text-subtitle-1">Charcoal Shaving Foam - (266ml x 2)</p>
+                            <p class="mb-2">
+                                <span class="text-subtitle-1 text-decoration-line-through text-grey">₹177</span>
+                                <span class="text-h6 d-inline-block ms-3 font-weight-bold">₹209</span>
+                            </p>
+                            <v-btn color="primary" class="elevation-0 mb-2 rounded-lg border-0" block size="large"
+                                >Upto 15% cashback</v-btn
+                            >
+                        </div>
+                    </v-card>
+                </v-col>
+            </v-row>
+        </v-container>
+    </div>
 </template>

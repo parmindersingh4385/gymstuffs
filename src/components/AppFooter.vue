@@ -1,5 +1,5 @@
 <template>
-  <v-footer app class="justify-center">
+  <v-footer app class="justify-center d-sm-block d-md-none">
     <a
       v-for="item in items"
       :key="item.title"
