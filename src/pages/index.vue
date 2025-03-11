@@ -146,7 +146,8 @@ const goToStore = (storeId) => {
                                 cover
                             />
                         </v-icon>
-                        <p class="text-body-2">{{ product.title }}</p>
+                        <!-- <p class="text-body-2">{{ product.title }}</p> -->
+                        <p>{{ product.title }}</p>
                     </v-sheet>
                 </v-slide-group-item>
             </v-slide-group>
