@@ -174,7 +174,7 @@ const goToStore = (storeId) => {
                         <div class="productImg">
                             <v-img :src="store.src"/>
                         </div>
-                        <div class="px-4 py-2 bg-grey-lighten-4">
+                        <div class="px-4 py-2 bg-grey-lighten-5">
                             <p class="text-caption mb-1 text-grey"><!-- {{ store.name }} --> Bombay Shaving Company</p>
                             <p class="mb-2 text-subtitle-1">Charcoal Shaving Foam - (266ml x 2)</p>
                             <p class="mb-2">

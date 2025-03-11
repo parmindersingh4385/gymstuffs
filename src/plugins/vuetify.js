@@ -16,4 +16,18 @@ export default createVuetify({
   theme: {
     defaultTheme: 'light',
   },
+  defaults: {
+    global: {
+      font: {
+        family: 'Figtree',
+      },
+    },
+  },
+  typography: {
+    webFontLoader: {
+      google: {
+        families: [],
+      },
+    },
+  },
 })
