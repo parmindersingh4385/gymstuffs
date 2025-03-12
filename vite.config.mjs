@@ -27,16 +27,16 @@ export default defineConfig({
             },
         }),
         Components(),
-        /* Fonts({
+        Fonts({
             google: {
                 families: [
                     {
-                        name: "Roboto",
-                        styles: "wght@100;300;400;500;700;900",
+                        name: "Figtree:ital",
+                        styles: "wght@0,300..900;1,300..900",
                     },
                 ],
             },
-        }), */
+        }),
         AutoImport({
             imports: ["vue", "vue-router"],
             eslintrc: {
