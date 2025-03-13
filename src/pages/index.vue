@@ -22,92 +22,92 @@ const productUrls = ref([
 
 const storeUrls = ref([
     {
-        src: "https://m.media-amazon.com/images/S/stores-image-uploads-eu-prod/5/AmazonStores/A21TJRUUN4KGV/e7eafc3586fcac05386e9e6bc68f03ca.w400.h400._CR0%2C0%2C400%2C400_SX200_.png",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/6918189.jpg",
         name: "Lifelong",
         store_id: "lifelong",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13088640.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/4923989.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5358323.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5819413.jpg  ",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/4608358.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "https://m.media-amazon.com/images/I/61QS2FASrOL._AC_UL480_FMwebp_QL65_.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/13712309.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13916956.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/7270576.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/5394841.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3080176.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/2038124.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/1345546.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3696147.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3038255.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
+        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/13917223.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/2758318.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
@@ -162,7 +162,7 @@ const goToStore = (storeId) => {
             </v-row>
             <v-row>
                 <v-col
-                    class="position-relative "
+                    class="position-relative custom-col"
                     v-for="(store, index) in storeUrls"
                     :key="index"
                     cols="12"
@@ -170,19 +170,19 @@ const goToStore = (storeId) => {
                     md="3"
                     @click="goToStore(store.store_id)"
                 >
-                    <v-card class="pa-0 h-100 elevation-0 border rounded-lg">
+                    <v-card class="pa-0 h-100 elevation-0">
                         <div class="productImg">
-                            <v-img :src="store.src"/>
+                            <v-img :src="store.src" class="mx-auto"/>
                         </div>
-                        <div class="px-4 py-2 bg-grey-lighten-5">
-                            <p class="text-caption mb-1 text-grey"><!-- {{ store.name }} --> Bombay Shaving Company</p>
-                            <p class="mb-2 text-subtitle-1">Charcoal Shaving Foam - (266ml x 2)</p>
+                        <div class="px-4 py-2 productInfo">
+                            <p class="proName text-grey"><!-- {{ store.name }} --> Bombay Shaving Company</p>
+                            <p class="proName">Charcoal Shaving Foam - (266ml x 2)</p>
                             <p class="mb-2">
                                 <span class="text-subtitle-1 text-decoration-line-through text-grey">₹177</span>
                                 <span class="text-h6 d-inline-block ms-3 font-weight-bold">₹209</span>
                             </p>
-                            <v-btn color="primary" class="elevation-0 mb-2 rounded-lg border-0" block size="large"
-                                >Upto 15% cashback</v-btn
+                            <v-btn  variant="flat" class="elevation-0 mb-2 font-weight-bold  rounded-pill border-0 bg-yellow-darken-1" 
+                                >Buy now</v-btn
                             >
                         </div>
                     </v-card>

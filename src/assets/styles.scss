@@ -3,3 +3,73 @@
 * {
     font-family: "Figtree", sans-serif !important;
 }
+.imageArea{
+    width: 150px;
+    height: 150px;
+    padding: 10px;
+    background-color: #e1e3ff;
+    border-radius: 50%;
+    margin: 0 9px 10px 9px;
+}
+
+.v-container {
+    max-width: 1600px !important;
+  }
+
+  .custom-col {
+    flex: 0 0 100%;
+   
+    .v-card {
+        border: rgb(213, 213, 213) 1px solid !important;
+        border-radius: 10px;
+        position: relative;
+        transition: box-shadow 200ms;
+		cursor: pointer;
+        &::after {
+          content: "";
+          position: absolute;
+          inset: 0;
+          pointer-events: none;
+          border-radius: 8px;
+          transition: box-shadow 200ms;
+        }
+      
+        &:hover {
+          box-shadow: rgba(0, 0, 0, 0.1) 0px 2px 20px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 1px !important;
+        }
+      }
+	  .productImg{
+		overflow: visible;
+		height:150px;
+		max-width: 150px;
+		margin: 30px auto;
+		
+		
+	}
+    .productInfo{
+		display: flex;
+    	flex-direction: column;
+		gap: 0.25rem;
+		.proName{
+			font-size: 0.875rem;
+			letter-spacing: 0.01em;
+			line-height: 1.42857;
+		}
+	}
+  }
+  
+  /* ✅ 1024px - 1600px तक 4 columns */
+  @media (min-width: 1024px) and (max-width: 1600px) {
+    .custom-col {
+      flex: 0 0 25%;
+      max-width: 25%;
+    }
+  }
+  
+  /* ✅ 1600px से ऊपर 5 columns */
+  @media (min-width: 1600px) {
+    .custom-col {
+      flex: 0 0 20%;
+      max-width: 20%;
+    }
+  }
