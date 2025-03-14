@@ -22,92 +22,92 @@ const productUrls = ref([
 
 const storeUrls = ref([
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/6918189.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Lifelong",
         store_id: "lifelong",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13088640.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/4923989.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5358323.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5819413.jpg  ",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/4608358.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://m.media-amazon.com/images/I/61QS2FASrOL._AC_UL480_FMwebp_QL65_.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/13712309.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13916956.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/7270576.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/5394841.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3080176.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/2038124.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/1345546.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3696147.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/3038255.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
     {
-        src: "	https://pricespy-75b8.kxcdn.com/product/standard/280/13917223.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/2758318.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
@@ -181,7 +181,7 @@ const goToStore = (storeId) => {
                                 <span class="text-subtitle-1 text-decoration-line-through text-grey">₹177</span>
                                 <span class="text-h6 d-inline-block ms-3 font-weight-bold">₹209</span>
                             </p>
-                            <v-btn  variant="flat" class="elevation-0 mb-2 font-weight-bold  rounded-pill border-0 bg-yellow-darken-1" 
+                            <v-btn  variant="flat" class="elevation-0 mb-2 font-weight-bold  rounded-pill border-0 bg-yellow-darken-1"
                                 >Buy now</v-btn
                             >
                         </div>
