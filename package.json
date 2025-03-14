@@ -11,6 +11,7 @@
   },
   "dependencies": {
     "@fontsource/figtree": "^5.2.5",
+    "@fontsource/mulish": "^5.2.5",
     "@mdi/font": "7.4.47",
     "roboto-fontface": "*",
     "vue": "^3.4.31",
