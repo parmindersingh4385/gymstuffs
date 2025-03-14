@@ -32,12 +32,22 @@ const storeUrls = ref([
         store_id: "homegalley",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13241587.jpg",
         name: "Boldfit",
         store_id: "boldfit",
     },
     {
         src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
+        name: "HomeGalley",
+        store_id: "homegalley",
+    },
+    {
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+        name: "Boldfit",
+        store_id: "boldfit",
+    },
+    {
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13241587.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
@@ -57,7 +67,7 @@ const storeUrls = ref([
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13241587.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
@@ -77,17 +87,7 @@ const storeUrls = ref([
         store_id: "boldfit",
     },
     {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
-        name: "HomeGalley",
-        store_id: "homegalley",
-    },
-    {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
-        name: "Boldfit",
-        store_id: "boldfit",
-    },
-    {
-        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
+        src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13241587.jpg",
         name: "HomeGalley",
         store_id: "homegalley",
     },
