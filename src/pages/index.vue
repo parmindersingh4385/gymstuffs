@@ -178,19 +178,18 @@ const goToStore = (storeId) => {
 						</div>
 						<div class="px-4 py-2 productInfo">
 							<p class="proName text-grey">
-								<!-- {{ store.name }} -->
-								Bombay Shaving Company
+								{{ store.name }}
 							</p>
 							<p class="proName">
-								Charcoal Shaving Foam - (266ml x 2)
+								Ninja Woodfire Electric BBQ Grill & Smoker OG701UK
 							</p>
 							<p class="mb-2">
 								<span
-									class="text-subtitle-1 text-decoration-line-through text-grey"
+									class="oldPirce text-decoration-line-through"
 									>₹177</span
 								>
 								<span
-									class="text-h6 d-inline-block ms-3 font-weight-bold"
+									class="price d-inline-block ms-3 font-weight-bold"
 									>₹209</span
 								>
 							</p>
