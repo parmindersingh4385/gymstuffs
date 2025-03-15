@@ -22,92 +22,92 @@ const productUrls = ref([
 
 const storeUrls = ref([
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Lifelong",
 		store_id: "lifelong",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5113846.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13470152.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5113846.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13470152.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5113846.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13470152.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5113846.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/13470152.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/140/13854691.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/d518465c-8662-45e8-890c-13d5598b06b3._CR0%2C0%2C3334%2C3334_SX200_.png",
 		name: "Boldfit",
 		store_id: "boldfit",
 	},
 	{
-		src: "https://pricespy-75b8.kxcdn.com/product/standard/280/5250941.jpg",
+		src: "https://m.media-amazon.com/images/S/al-eu-726f4d26-7fdb/f5a7f109-839e-4e9a-a2da-3f9beff0cf6c._CR0%2C0%2C3001%2C3001_SX200_.jpg",
 		name: "HomeGalley",
 		store_id: "homegalley",
 	},
@@ -181,7 +181,8 @@ const goToStore = (storeId) => {
 								{{ store.name }}
 							</p>
 							<p class="proName">
-								Ninja Woodfire Electric BBQ Grill & Smoker OG701UK
+								Ninja Woodfire Electric BBQ Grill & Smoker
+								OG701UK
 							</p>
 							<p class="mb-2">
 								<span
