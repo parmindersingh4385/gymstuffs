@@ -20,7 +20,7 @@
 }
 
 .v-container {
-	max-width: 1600px !important;
+	max-width: 1500px !important;
 }
 
 .custom-col {
@@ -61,12 +61,28 @@
 			font-size: 0.875rem;
 			letter-spacing: 0.01em;
 			line-height: 1.42857;
+			font-weight: 600;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			-webkit-line-clamp: 2;
+			overflow: hidden;
+		}
+		.oldPirce{
+			font-size: 0.875rem;
+			letter-spacing: 0.01em;
+			line-height: 1.42857;
+			opacity: .6;
+		}
+		.price{
+			font-size: 1rem;
+			letter-spacing: 0px;
+			line-height: 1.5;
 		}
 	}
 }
 
 /* ✅ 1024px - 1600px तक 4 columns */
-@media (min-width: 1024px) and (max-width: 1600px) {
+@media (min-width: 1024px) and (max-width: 1500px) {
 	.custom-col {
 		flex: 0 0 25%;
 		max-width: 25%;
@@ -74,7 +90,7 @@
 }
 
 /* ✅ 1600px से ऊपर 5 columns */
-@media (min-width: 1600px) {
+@media (min-width: 1500px) {
 	.custom-col {
 		flex: 0 0 20%;
 		max-width: 20%;
