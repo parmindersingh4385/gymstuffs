@@ -17,6 +17,9 @@
 	background-color: #e1e3ff;
 	border-radius: 50%;
 	margin: 0 9px 10px 9px;
+	img{
+		height: 130px;
+	}
 }
 
 .v-container {
@@ -81,6 +84,13 @@
 	}
 }
 
+
+.v-slide-group__next, .v-slide-group__prev {
+    background-color: transparent !important;
+    box-shadow: none !important;  /* अगर कोई shadow है तो उसे हटाने के लिए */
+	min-width: 24px !important;
+}
+
 /* ✅ 1024px - 1600px तक 4 columns */
 @media (min-width: 1024px) and (max-width: 1500px) {
 	.custom-col {
@@ -94,5 +104,14 @@
 	.custom-col {
 		flex: 0 0 20%;
 		max-width: 20%;
+	}
+}
+@media (max-width: 760px){
+	.imageArea {
+		width: 70px;
+		height: 70px;
+		img{
+			height: 50px;
+		}
 	}
 }

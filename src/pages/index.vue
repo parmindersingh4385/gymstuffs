@@ -142,7 +142,6 @@ const goToStore = (storeId) => {
 								<v-img
 									src="https://buykaro.com/cdn/shop/files/Mask_group_5_d77775c1-7ea8-4781-bdd9-67f7e8c6a93e_large.png?v=1731920247"
 									alt="Profile"
-									height="130"
 									rounded="circle"
 									cover
 								/>
