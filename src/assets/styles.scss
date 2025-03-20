@@ -110,8 +110,13 @@
 	.imageArea {
 		width: 70px;
 		height: 70px;
-		img{
-			height: 50px;
+		.v-img{
+			height: 70px;
+			width: 70px;
+			img{
+				height: 100%;
+				width: 100%;
+			}
 		}
 	}
 }
