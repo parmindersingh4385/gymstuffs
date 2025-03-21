@@ -136,6 +136,7 @@ const goToStore = (storeId) => {
 					>
 						<v-sheet
 							class="p-3 d-flex flex-column justify-center align-center mx-2"
+							style="cursor: pointer"
 							@click="goToProduct(product.product_url)"
 						>
 							<div class="p-0 m-0 imageArea">
