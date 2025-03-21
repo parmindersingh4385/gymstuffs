@@ -27,7 +27,7 @@ const goToHomePage = () => {
             <v-spacer />
 
             <!-- Profile Avatar -->
-            <div class="mr-sm-2 mr-md-5">
+            <div class="pe-4 pe-md-5">
                 <v-menu>
                     <template #activator="{ props }">
                         <v-avatar
