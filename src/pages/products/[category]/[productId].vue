@@ -1,20 +1,31 @@
 <script setup>
+import { ref } from "vue";
 import { useRoute } from "vue-router";
+import { VImg } from "vuetify/components";
 
-/* const route = useRoute();
+const route = useRoute();
 
-console.log(route.params.category);
-console.log(route.params.productId); */
+const categoryId = route.params.category;
+
+const productInfo = {
+	shakers:
+		"https://m.media-amazon.com/images/I/31cHRGL5BdL._SX300_SY300_QL70_FMwebp_.jpg",
+	rollers:
+		"https://m.media-amazon.com/images/I/41ASLBZg93L._SX300_SY300_QL70_FMwebp_.jpg",
+	gloves: "https://m.media-amazon.com/images/I/51rdG3tKnUL._SX300_SY300_QL70_FMwebp_.jpg",
+	wristbands: "https://m.media-amazon.com/images/I/71aQ+1SzYTL._SX569_.jpg",
+	skippingropes:
+		"https://m.media-amazon.com/images/I/61msg8qvOGL._SX569_.jpg",
+};
+
+const productImage = productInfo[categoryId];
 </script>
 
 <template>
 	<v-container>
 		<v-sheet style="cursor: pointer">
 			<div style="width: 400px; height: 400px">
-				<v-img
-					src="https://m.media-amazon.com/images/I/41ASLBZg93L._SX300_SY300_QL70_FMwebp_.jpg"
-					alt="Profile"
-				/>
+				<VImg :src="productImage" alt="Profile"></VImg>
 			</div>
 			<div>
 				MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified,
