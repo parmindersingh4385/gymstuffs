@@ -1,4 +1,13 @@
 <script setup>
+import { useRoute, useRouter } from "vue-router";
+
+const router = useRouter();
+const route = useRoute();
+
+const goToProductDetail = () => {
+	router.push(route.fullPath + "/12345");
+};
+
 const products = [
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 1", price: "$10" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 2", price: "$20" },
@@ -44,12 +53,12 @@ const products = [
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
-					v-for="(store, index) in products"
+					v-for="(product, index) in products"
 					:key="index"
 					cols="12"
 					sm="6"
 					md="3"
-					@click="goToStore(store.store_id)"
+					@click="goToProductDetail(product)"
 				>
 					<v-card class="pa-0 h-100 elevation-0">
 						<div class="productImg">

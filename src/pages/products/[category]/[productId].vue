@@ -1,18 +1,18 @@
 <script setup>
 import { useRoute } from "vue-router";
 
-const route = useRoute();
+/* const route = useRoute();
 
-/* console.log(route.params.category);
+console.log(route.params.category);
 console.log(route.params.productId); */
 </script>
 
 <template>
 	<v-container>
 		<v-sheet style="cursor: pointer">
-			<div style="width: 270px; height: 270px">
+			<div style="width: 400px; height: 400px">
 				<v-img
-					src="https://asset20.ckassets.com/resources/image/ckseller/CKS-Health-Supplements-000293_1-1691578247.jpg"
+					src="https://m.media-amazon.com/images/I/41ASLBZg93L._SX300_SY300_QL70_FMwebp_.jpg"
 					alt="Profile"
 				/>
 			</div>
