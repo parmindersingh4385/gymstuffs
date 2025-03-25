@@ -22,31 +22,33 @@ const productImage = productInfo[categoryId];
 </script>
 
 <template>
-	<v-container>
-		<v-sheet style="cursor: pointer">
-			<div style="width: 400px; height: 400px">
-				<VImg :src="productImage" alt="Profile"></VImg>
-			</div>
-			<div>
-				MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified,
-				Chocolate Hazelnut
-			</div>
-			<div style="width: 120px; height: 120px">
-				<v-img
-					style="width: 80px; height: 40px"
-					src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
-				/>
-				<div>Discounted Price - ₹2,701</div>
-				<VBtn>Grab Deal</VBtn>
-			</div>
-			<div style="width: 120px; height: 120px">
-				<v-img
-					style="width: 80px; height: 40px"
-					src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
-				/>
-				<div>Discounted Price - ₹2,701</div>
-				<VBtn>Grab Deal</VBtn>
-			</div>
-		</v-sheet>
+	<v-container fluid class="px-3 px-md-5">
+		<v-row>
+			<v-col cols="12" md="2">
+				<v-img :src="productImage" alt="Profile" class="responsive-img"/>
+			</v-col>
+			<v-col>
+				<div>
+					MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified,
+					Chocolate Hazelnut
+				</div>
+				<div style="width: 120px; height: 120px">
+					<v-img
+						style="width: 80px; height: 40px"
+						src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
+					/>
+					<div>Discounted Price - ₹2,701</div>
+					<VBtn>Grab Deal</VBtn>
+				</div>
+				<div style="width: 120px; height: 120px">
+					<v-img
+						style="width: 80px; height: 40px"
+						src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
+					/>
+					<div>Discounted Price - ₹2,701</div>
+					<VBtn>Grab Deal</VBtn>
+				</div>
+			</v-col>
+		</v-row>	
 	</v-container>
 </template>

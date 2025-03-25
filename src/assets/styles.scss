@@ -87,10 +87,15 @@
 
 .v-slide-group__next, .v-slide-group__prev {
     background-color: transparent !important;
-    box-shadow: none !important;  /* अगर कोई shadow है तो उसे हटाने के लिए */
+    box-shadow: none !important; 
 	min-width: 24px !important;
 }
 
+.responsive-img {
+	max-width: 450px; 
+	width: 100%;
+	height: auto;
+  }
 
 /* ✅ 1024px - 1600px तक 4 columns */
 @media (min-width: 1024px) and (max-width: 1500px) {
