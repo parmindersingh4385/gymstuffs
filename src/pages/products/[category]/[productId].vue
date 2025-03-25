@@ -41,9 +41,14 @@ const breadCrumbItems = [
 
 <template>
 	<v-container fluid class="px-3 px-md-5">
+		<VBreadcrumbs :items="breadCrumbItems" />
 		<v-row>
 			<v-col cols="12" md="2">
-				<v-img :src="productImage" alt="Profile" class="responsive-img"/>
+				<v-img
+					:src="productImage"
+					alt="Profile"
+					class="responsive-img"
+				/>
 			</v-col>
 			<v-col>
 				<div>
@@ -67,6 +72,6 @@ const breadCrumbItems = [
 					<VBtn>Grab Deal</VBtn>
 				</div>
 			</v-col>
-		</v-row>	
+		</v-row>
 	</v-container>
 </template>
