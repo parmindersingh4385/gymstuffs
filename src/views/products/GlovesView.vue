@@ -115,7 +115,7 @@ const products = [
 	<div class="px-0 px-md-15">
 		<v-container fluid class="px-3 px-md-5">
 			<v-row>
-				<v-col>
+				<v-col class="innerBanner">
 					<v-img
 						class="rounded"
 						src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"

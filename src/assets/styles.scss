@@ -91,6 +91,7 @@
 	min-width: 24px !important;
 }
 
+
 /* ✅ 1024px - 1600px तक 4 columns */
 @media (min-width: 1024px) and (max-width: 1500px) {
 	.custom-col {
@@ -117,6 +118,13 @@
 				height: 100%;
 				width: 100%;
 			}
+		}
+	}
+	
+	.innerBanner{
+		height: 200px;
+		img, .v-responsive__sizer, .v-responsive{
+			height: 176px !important;
 		}
 	}
 }
