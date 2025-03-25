@@ -19,10 +19,29 @@ const productInfo = {
 };
 
 const productImage = productInfo[categoryId];
+
+const breadCrumbItems = [
+	{
+		title: "Home",
+		disabled: false,
+		to: "/",
+	},
+	{
+		title: "Shakers",
+		disabled: false,
+		to: "/products/shakers",
+	},
+	{
+		title: "MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified, Chocolate Hazelnut",
+		disabled: true,
+		to: "",
+	},
+];
 </script>
 
 <template>
 	<v-container>
+		<VBreadcrumbs :items="breadCrumbItems" />
 		<v-sheet style="cursor: pointer">
 			<div style="width: 400px; height: 400px">
 				<VImg :src="productImage" alt="Profile"></VImg>
