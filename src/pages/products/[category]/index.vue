@@ -19,9 +19,23 @@ const componentViews = {
 	skippingropes: SkippingRopesView,
 };
 
+const breadCrumbItems = [
+	{
+		title: "Home",
+		disabled: false,
+		to: "/",
+	},
+	{
+		title: "Shakers",
+		disabled: true,
+		to: "/products/shakers",
+	},
+];
+
 currentComponent.value = componentViews[route.params.category];
 </script>
 
 <template>
+	<VBreadcrumbs :items="breadCrumbItems" />
 	<component :is="currentComponent" />
 </template>
