@@ -41,7 +41,7 @@ const breadCrumbItems = [
 
 <template>
 	<v-container fluid class="px-3 px-md-5">
-		<VBreadcrumbs :items="breadCrumbItems" />
+		<VBreadcrumbs :items="breadCrumbItems"  class="text-truncate"/>
 		<v-row>
 			<v-col cols="12" md="5">
 				<v-img
@@ -51,13 +51,13 @@ const breadCrumbItems = [
 				/>
 			</v-col>
 			<v-col cols="12" md="7">
-				<div>
+				<div class="mb-5">
 					MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified,
 					Chocolate Hazelnut
 				</div>
 				<v-row>
 					<v-col cols="12" md="6">
-						<div class="border my-4 pa-4 rounded-lg bg-grey-lighten-5">
+						<div class="border pa-4 rounded-lg bg-grey-lighten-5">
 							<v-img
 								style="width: 150px"
 								src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
@@ -67,7 +67,7 @@ const breadCrumbItems = [
 						</div>
 					</v-col>
 					<v-col cols="12" md="6">
-						<div class="border my-4 pa-4 rounded-lg bg-grey-lighten-5">
+						<div class="border pa-4 rounded-lg bg-grey-lighten-5">
 							<v-img
 								style="width: 150px"
 								src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
