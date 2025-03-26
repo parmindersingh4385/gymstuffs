@@ -43,34 +43,40 @@ const breadCrumbItems = [
 	<v-container fluid class="px-3 px-md-5">
 		<VBreadcrumbs :items="breadCrumbItems" />
 		<v-row>
-			<v-col cols="12" md="2">
+			<v-col cols="12" md="5">
 				<v-img
 					:src="productImage"
 					alt="Profile"
-					class="responsive-img"
+					class="responsive-img mx-auto"
 				/>
 			</v-col>
-			<v-col>
+			<v-col cols="12" md="7">
 				<div>
 					MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified,
 					Chocolate Hazelnut
 				</div>
-				<div style="width: 120px; height: 120px">
-					<v-img
-						style="width: 80px; height: 40px"
-						src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
-					/>
-					<div>Discounted Price - ₹2,701</div>
-					<VBtn>Grab Deal</VBtn>
-				</div>
-				<div style="width: 120px; height: 120px">
-					<v-img
-						style="width: 80px; height: 40px"
-						src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
-					/>
-					<div>Discounted Price - ₹2,701</div>
-					<VBtn>Grab Deal</VBtn>
-				</div>
+				<v-row>
+					<v-col cols="12" md="6">
+						<div class="border my-4 pa-4 rounded-lg bg-grey-lighten-5">
+							<v-img
+								style="width: 150px"
+								src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
+							/>
+							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
+							<VBtn variant="flat" color="primary" size="large" class="rounded-lg">Grab Deal</VBtn>
+						</div>
+					</v-col>
+					<v-col cols="12" md="6">
+						<div class="border my-4 pa-4 rounded-lg bg-grey-lighten-5">
+							<v-img
+								style="width: 150px"
+								src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
+							/>
+							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
+							<VBtn variant="flat" color="primary" size="large" class="rounded-lg">Grab Deal</VBtn>
+						</div>
+					</v-col>
+				</v-row>
 			</v-col>
 		</v-row>
 	</v-container>
