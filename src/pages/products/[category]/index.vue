@@ -36,6 +36,8 @@ currentComponent.value = componentViews[route.params.category];
 </script>
 
 <template>
-	<VBreadcrumbs :items="breadCrumbItems" />
+	<v-container fluid class="py-0">
+		<VBreadcrumbs :items="breadCrumbItems" class="pb-1 px-0"/>
+	</v-container>
 	<component :is="currentComponent" />
 </template>

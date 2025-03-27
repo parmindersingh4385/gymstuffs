@@ -40,15 +40,17 @@ const breadCrumbItems = [
 </script>
 
 <template>
-	<v-container fluid class="px-3 px-md-5">
-		<VBreadcrumbs :items="breadCrumbItems"  class="text-truncate"/>
+	<v-container fluid class="px-3 px-md-5 pt-0">
+		<VBreadcrumbs :items="breadCrumbItems"  class="text-truncate px-0" />
 		<v-row>
 			<v-col cols="12" md="5">
-				<v-img
-					:src="productImage"
-					alt="Profile"
-					class="responsive-img mx-auto"
-				/>
+				<div class="border pa-4 rounded-lg">
+					<v-img
+						:src="productImage"
+						alt="Profile"
+						class="responsive-img mx-auto"
+					/>
+				</div>
 			</v-col>
 			<v-col cols="12" md="7">
 				<div class="mb-5">
@@ -63,7 +65,7 @@ const breadCrumbItems = [
 								src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
 							/>
 							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
-							<VBtn variant="flat" color="primary" size="large" class="rounded-lg">Grab Deal</VBtn>
+							<VBtn variant="flat" color="primary" class="rounded-lg">Grab Deal</VBtn>
 						</div>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -73,7 +75,7 @@ const breadCrumbItems = [
 								src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
 							/>
 							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
-							<VBtn variant="flat" color="primary" size="large" class="rounded-lg">Grab Deal</VBtn>
+							<VBtn variant="flat" color="primary" class="rounded-lg">Grab Deal</VBtn>
 						</div>
 					</v-col>
 				</v-row>
