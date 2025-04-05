@@ -1,9 +1,3 @@
-/* @import url("https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap");
-
-* {
-    font-family: "Figtree", sans-serif !important;
-} */
-
 @import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200..1000;1,200..1000&display=swap");
 
 * {
@@ -17,7 +11,7 @@
 	background-color: #e1e3ff;
 	border-radius: 50%;
 	margin: 0 9px 10px 9px;
-	img{
+	img {
 		height: 110px;
 	}
 }
@@ -70,13 +64,13 @@
 			-webkit-line-clamp: 2;
 			overflow: hidden;
 		}
-		.oldPirce{
+		.oldPirce {
 			font-size: 0.875rem;
 			letter-spacing: 0.01em;
 			line-height: 1.42857;
-			opacity: .6;
+			opacity: 0.6;
 		}
-		.price{
+		.price {
 			font-size: 1rem;
 			letter-spacing: 0px;
 			line-height: 1.5;
@@ -84,17 +78,17 @@
 	}
 }
 
-
-.v-slide-group__next, .v-slide-group__prev {
-    background-color: transparent !important;
-    box-shadow: none !important; 
+.v-slide-group__next,
+.v-slide-group__prev {
+	background-color: transparent !important;
+	box-shadow: none !important;
 	min-width: 24px !important;
 }
 
 .responsive-img {
 	width: 450px;
 	height: auto;
-  }
+}
 
 /* ✅ 1024px - 1600px तक 4 columns */
 @media (min-width: 1024px) and (max-width: 1500px) {
@@ -111,23 +105,25 @@
 		max-width: 20%;
 	}
 }
-@media (max-width: 760px){
+@media (max-width: 760px) {
 	.imageArea {
 		width: 70px;
 		height: 70px;
-		.v-img{
+		.v-img {
 			height: 70px;
 			width: 70px;
-			img{
+			img {
 				height: 100%;
 				width: 100%;
 			}
 		}
 	}
-	
-	.innerBanner{
+
+	.innerBanner {
 		height: 200px;
-		img, .v-responsive__sizer, .v-responsive{
+		img,
+		.v-responsive__sizer,
+		.v-responsive {
 			height: 176px !important;
 		}
 	}
