@@ -19,7 +19,9 @@ const componentViews = {
 	skippingropes: SkippingRopesView,
 };
 
-currentComponent.value = componentViews[route.params.category];
+const categoryId = route.params.category;
+
+currentComponent.value = componentViews[categoryId];
 
 const breadCrumbObj = {
 	shakers: {
@@ -57,7 +59,7 @@ const breadCrumbItems = [
 	},
 ];
 
-breadCrumbItems.push(breadCrumbObj[route.params.category]);
+breadCrumbItems.push(breadCrumbObj[categoryId]);
 </script>
 
 <template>

@@ -20,13 +20,41 @@ const productInfo = {
 
 const productImage = productInfo[categoryId];
 
+const breadCrumbObj = {
+	shakers: {
+		title: "Shakers",
+		disabled: false,
+		to: "/products/shakers",
+	},
+	rollers: {
+		title: "Rollers",
+		disabled: false,
+		to: "/products/rollers",
+	},
+	gloves: {
+		title: "Gloves",
+		disabled: false,
+		to: "/products/gloves",
+	},
+	wristbands: {
+		title: "Wrist bands",
+		disabled: false,
+		to: "/products/wristbands",
+	},
+	skippingropes: {
+		title: "Skipping ropes",
+		disabled: false,
+		to: "/products/skippingropes",
+	},
+};
+
 const breadCrumbItems = [
 	{
 		title: "Home",
 		disabled: false,
 		to: "/",
 	},
-	{
+	/* {
 		title: "Shakers",
 		disabled: false,
 		to: "/products/shakers",
@@ -35,13 +63,21 @@ const breadCrumbItems = [
 		title: "MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified, Chocolate Hazelnut",
 		disabled: true,
 		to: "",
-	},
+	}, */
 ];
+
+breadCrumbItems.push(breadCrumbObj[categoryId]);
+
+breadCrumbItems.push({
+	title: "MuscleBlaze Biozyme Performance Whey, Labdoor USA Certified, Chocolate Hazelnut",
+	disabled: true,
+	to: "",
+});
 </script>
 
 <template>
 	<v-container fluid class="px-3 px-md-5 pt-0">
-		<VBreadcrumbs :items="breadCrumbItems"  class="text-truncate px-0" />
+		<VBreadcrumbs :items="breadCrumbItems" class="text-truncate px-0" />
 		<v-row>
 			<v-col cols="12" md="5">
 				<div class="border pa-4 rounded-lg">
@@ -64,8 +100,18 @@ const breadCrumbItems = [
 								style="width: 150px"
 								src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
 							/>
-							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
-							<VBtn variant="flat" color="primary" class="rounded-lg">Grab Deal</VBtn>
+							<div class="font-weight-bold mb-3">
+								Discounted Price
+								<span class="text-h5 font-weight-bold"
+									>₹2,701
+								</span>
+							</div>
+							<VBtn
+								variant="flat"
+								color="primary"
+								class="rounded-lg"
+								>Grab Deal</VBtn
+							>
 						</div>
 					</v-col>
 					<v-col cols="12" md="6">
@@ -74,8 +120,18 @@ const breadCrumbItems = [
 								style="width: 150px"
 								src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
 							/>
-							<div class="font-weight-bold mb-3">Discounted Price <span class="text-h5 font-weight-bold">₹2,701 </span></div>
-							<VBtn variant="flat" color="primary" class="rounded-lg">Grab Deal</VBtn>
+							<div class="font-weight-bold mb-3">
+								Discounted Price
+								<span class="text-h5 font-weight-bold"
+									>₹2,701
+								</span>
+							</div>
+							<VBtn
+								variant="flat"
+								color="primary"
+								class="rounded-lg"
+								>Grab Deal</VBtn
+							>
 						</div>
 					</v-col>
 				</v-row>
