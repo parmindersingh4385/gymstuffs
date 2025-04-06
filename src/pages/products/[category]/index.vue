@@ -19,20 +19,45 @@ const componentViews = {
 	skippingropes: SkippingRopesView,
 };
 
+currentComponent.value = componentViews[route.params.category];
+
+const breadCrumbObj = {
+	shakers: {
+		title: "Shakers",
+		disabled: true,
+		to: "/products/shakers",
+	},
+	rollers: {
+		title: "Rollers",
+		disabled: true,
+		to: "/products/rollers",
+	},
+	gloves: {
+		title: "Gloves",
+		disabled: true,
+		to: "/products/gloves",
+	},
+	wristbands: {
+		title: "Wrist bands",
+		disabled: true,
+		to: "/products/wristbands",
+	},
+	skippingropes: {
+		title: "Skipping ropes",
+		disabled: true,
+		to: "/products/skippingropes",
+	},
+};
+
 const breadCrumbItems = [
 	{
 		title: "Home",
 		disabled: false,
 		to: "/",
 	},
-	{
-		title: "Shakers",
-		disabled: true,
-		to: "/products/shakers",
-	},
 ];
 
-currentComponent.value = componentViews[route.params.category];
+breadCrumbItems.push(breadCrumbObj[route.params.category]);
 </script>
 
 <template>
