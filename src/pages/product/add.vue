@@ -98,7 +98,7 @@ const closeWindow = () => {};
 						<td>Product id</td>
 						<td>{{ productInfo?.productId }}</td>
 					</tr>
-					<tr>
+					<!-- <tr>
 						<td>Title</td>
 						<td>{{ productInfo?.title }}</td>
 					</tr>
@@ -123,7 +123,7 @@ const closeWindow = () => {};
 								>Go to product</a
 							>
 						</td>
-					</tr>
+					</tr> -->
 				</tbody>
 			</v-table>
 		</v-card>
