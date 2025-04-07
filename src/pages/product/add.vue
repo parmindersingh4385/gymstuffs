@@ -86,7 +86,7 @@ const closeWindow = () => {};
 				</VCardActions>
 			</VForm>
 			<!-- shows products detail -->
-			<v-table v-if="productInfo">
+			<v-table>
 				<thead>
 					<tr>
 						<th class="text-left">Product information</th>
@@ -96,11 +96,11 @@ const closeWindow = () => {};
 				<tbody>
 					<tr>
 						<td>Product id</td>
-						<td>{{ productInfo.productId }}</td>
+						<td>{{ productInfo?.productId }}</td>
 					</tr>
 					<tr>
 						<td>Title</td>
-						<td>{{ productInfo.title }}</td>
+						<td>{{ productInfo?.title }}</td>
 					</tr>
 					<tr>
 						<td>Image</td>
@@ -109,7 +109,7 @@ const closeWindow = () => {};
 								class="py-4 px-4"
 								width="200"
 								height="200"
-								:src="productInfo.imageUrls['200x200']"
+								:src="productInfo?.imageUrls['200x200']"
 							></VImg>
 						</td>
 					</tr>
@@ -117,7 +117,7 @@ const closeWindow = () => {};
 						<td>Affilate url</td>
 						<td>
 							<a
-								:href="productInfo.productUrl"
+								:href="productInfo?.productUrl"
 								target="_blank"
 								rel="noopener"
 								>Go to product</a
