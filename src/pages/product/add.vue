@@ -26,6 +26,8 @@ const handleSubmit = async () => {
 		return false;
 	}
 
+	isLoading.value = true;
+
 	const productId = formData.productId;
 
 	axios
@@ -35,8 +37,12 @@ const handleSubmit = async () => {
 		.then((res) => {
 			formData.productId = null;
 			productInfo.value = res.data.productBaseInfoV1;
+			isLoading.value = false;
 		})
-		.catch((err) => console.error("Error:", err.response?.data || err));
+		.catch((err) => {
+			console.error("Error:", err.response?.data || err);
+			isLoading.value = false;
+		});
 };
 
 const closeWindow = () => {};
