@@ -53,7 +53,8 @@ const closeWindow = () => {};
 		class="d-flex justify-center align-center py-0"
 		style="height: 100vh"
 	>
-		<v-card class="pa-4" width="400">
+		<v-card class="pa-4" width="400"
+			>{{ productInfo?.title }}
 			<VForm @submit.prevent="handleSubmit" ref="formRef">
 				<VRow>
 					<VCol cols="12">
@@ -86,7 +87,7 @@ const closeWindow = () => {};
 				</VCardActions>
 			</VForm>
 			<!-- shows products detail -->
-			<v-table>
+			<!-- <v-table>
 				<thead>
 					<tr>
 						<th class="text-left">Product information</th>
@@ -98,7 +99,7 @@ const closeWindow = () => {};
 						<td>Product id</td>
 						<td>{{ productInfo?.productId }}</td>
 					</tr>
-					<!-- <tr>
+					<tr>
 						<td>Title</td>
 						<td>{{ productInfo?.title }}</td>
 					</tr>
@@ -123,9 +124,9 @@ const closeWindow = () => {};
 								>Go to product</a
 							>
 						</td>
-					</tr> -->
+					</tr>
 				</tbody>
-			</v-table>
+			</v-table> -->
 		</v-card>
 	</v-container>
 </template>
