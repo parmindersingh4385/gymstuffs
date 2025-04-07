@@ -6,25 +6,6 @@ const isLoading = ref(false);
 const formRef = ref(null);
 const productInfo = ref(null);
 
-const desserts = [
-	{
-		name: "Frozen Yogurt",
-		calories: 159,
-	},
-	{
-		name: "Ice cream sandwich",
-		calories: 237,
-	},
-	{
-		name: "Eclair",
-		calories: 262,
-	},
-	{
-		name: "Cupcake",
-		calories: 305,
-	},
-];
-
 // form Data
 const formData = reactive({
 	productId: null,
@@ -48,11 +29,12 @@ const handleSubmit = async () => {
 	const productId = formData.productId;
 
 	axios
-		.get(`http://localhost:3001/product/${productId}`)
+		.get(
+			`https://gymstuffsapi-production.up.railway.app/product/${productId}`,
+		)
 		.then((res) => {
 			formData.productId = null;
 			productInfo.value = res.data.productBaseInfoV1;
-			console.log(productInfo.value);
 		})
 		.catch((err) => console.error("Error:", err.response?.data || err));
 };
