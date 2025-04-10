@@ -59,9 +59,8 @@ const closeWindow = () => {};
 		class="d-flex justify-center align-center py-0"
 		style="height: 100vh"
 	>
-		PRODUCT_ID:-{{ pId }}
-		<v-card class="pa-4" width="400"
-			>{{ productInfo?.title }}
+		<v-card class="pa-4" width="400">
+			PRODUCT_ID:-{{ pId }}<br />{{ productInfo?.title }}
 			<VForm @submit.prevent="handleSubmit" ref="formRef">
 				<VRow>
 					<VCol cols="12">
