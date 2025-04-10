@@ -6,6 +6,7 @@ const isLoading = ref(false);
 const formRef = ref(null);
 const productInfo = ref(null);
 const pId = ref(null);
+const productTitle = ref(null);
 
 // form Data
 const formData = reactive({
@@ -38,6 +39,7 @@ const handleSubmit = async () => {
 		)
 		.then((res) => {
 			formData.productId = null;
+			productTitle.value = res.data.productBaseInfoV1.title;
 			productInfo.value = res.data.productBaseInfoV1;
 			isLoading.value = false;
 		})
@@ -60,7 +62,8 @@ const closeWindow = () => {};
 		style="height: 100vh"
 	>
 		<v-card class="pa-4" width="400">
-			PRODUCT_ID:-{{ pId }}<br />{{ productInfo?.title }}
+			PRODUCT_ID:-{{ pId }}<br />
+			PRODUCT_TITLE:-{{ productTitle }}<br />
 			<VForm @submit.prevent="handleSubmit" ref="formRef">
 				<VRow>
 					<VCol cols="12">
