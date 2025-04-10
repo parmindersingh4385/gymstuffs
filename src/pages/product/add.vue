@@ -5,6 +5,7 @@ import axios from "axios";
 const isLoading = ref(false);
 const formRef = ref(null);
 const productInfo = ref(null);
+const pId = ref(null);
 
 // form Data
 const formData = reactive({
@@ -29,6 +30,7 @@ const handleSubmit = async () => {
 	isLoading.value = true;
 
 	const productId = getProductIdFromUrl(formData.productId);
+	pId.value = productId;
 
 	axios
 		.get(
@@ -57,6 +59,7 @@ const closeWindow = () => {};
 		class="d-flex justify-center align-center py-0"
 		style="height: 100vh"
 	>
+		PRODUCT_ID:-{{ pId }}
 		<v-card class="pa-4" width="400"
 			>{{ productInfo?.title }}
 			<VForm @submit.prevent="handleSubmit" ref="formRef">
