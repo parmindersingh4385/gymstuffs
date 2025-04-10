@@ -28,7 +28,7 @@ const handleSubmit = async () => {
 
 	isLoading.value = true;
 
-	const productId = formData.productId;
+	const productId = getProductIdFromUrl(formData.productId);
 
 	axios
 		.get(
@@ -43,6 +43,10 @@ const handleSubmit = async () => {
 			console.error("Error:", err.response?.data || err);
 			isLoading.value = false;
 		});
+};
+
+const getProductIdFromUrl = (productUrl) => {
+	return productUrl.split("?")[1].split("&")[0].split("=")[1];
 };
 
 const closeWindow = () => {};
@@ -60,7 +64,7 @@ const closeWindow = () => {};
 					<VCol cols="12">
 						<VTextField
 							v-model="formData.productId"
-							label="Product ID"
+							label="Enter product url"
 							type="input"
 							:rules="[requiredValidator]"
 						></VTextField>
