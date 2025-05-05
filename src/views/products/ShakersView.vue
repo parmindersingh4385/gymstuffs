@@ -1,8 +1,12 @@
 <script setup>
+import { useShakersStore } from "@/stores/ShakersStore";
+import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
+
+const shakersStore = useShakersStore();
 
 const goToProductDetail = () => {
 	router.push(route.fullPath + "/12345");
@@ -35,6 +39,12 @@ const products = [
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 24", price: "$60" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 25", price: "$60" },
 ];
+
+onMounted(async () => {
+	if (!shakersStore.loaded) {
+		await shakersStore.fetchShakers();
+	}
+});
 </script>
 
 <template>
@@ -53,7 +63,7 @@ const products = [
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
-					v-for="(product, index) in products"
+					v-for="(product, index) in shakersStore.shakers"
 					:key="index"
 					cols="12"
 					sm="6"
@@ -68,10 +78,9 @@ const products = [
 							/>
 						</div>
 						<div class="px-4 py-2 productInfo">
-							<p class="proName text-grey">Lifelong</p>
+							<p class="proName text-grey">{{ product.brand }}</p>
 							<p class="proName">
-								Ninja Woodfire Electric BBQ Grill & Smoker
-								OG701UK
+								{{ product.title }}
 							</p>
 							<p class="mb-2">
 								<span
