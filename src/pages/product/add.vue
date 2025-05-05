@@ -1,16 +1,40 @@
 <script setup>
 import { reactive, ref } from "vue";
 import axios from "axios";
+import { VCol } from "vuetify/components";
 
 const isLoading = ref(false);
 const formRef = ref(null);
-const productInfo = ref(null);
-const pId = ref(null);
-const productTitle = ref(null);
+const requestMessage = ref("");
+const requestMessageCls = ref("");
+
+const items = [
+	{
+		title: "Shakers",
+		value: "shakers",
+	},
+	{
+		title: "Rollers",
+		value: "rollers",
+	},
+	{
+		title: "Gloves",
+		value: "gloves",
+	},
+	{
+		title: "Wrist bands",
+		value: "wristbands",
+	},
+	{
+		title: "Skipping ropes",
+		value: "skippingropes",
+	},
+];
 
 // form Data
 const formData = reactive({
-	productId: null,
+	productUrl: null,
+	productType: null,
 });
 
 // 👉 Required Validator
@@ -30,18 +54,32 @@ const handleSubmit = async () => {
 
 	isLoading.value = true;
 
-	const productId = getProductIdFromUrl(formData.productId);
-	pId.value = productId;
+	const productId = getProductIdFromUrl(formData.productUrl),
+		productType = formData.productType;
 
 	axios
-		.get(
-			`https://gymstuffsapi-production.up.railway.app/product/${productId}`,
-		)
+		.post(`https://gymstuffsapi-production.up.railway.app/api/products`, {
+			id: productId,
+			type: productType,
+		})
 		.then((res) => {
-			formData.productId = null;
-			productTitle.value = res.data.productBaseInfoV1.title;
-			productInfo.value = res.data.productBaseInfoV1;
+			formData.productUrl = null;
+			formData.productType = null;
 			isLoading.value = false;
+
+			const retData = res.data;
+
+			if (retData?.message) {
+				requestMessage.value = retData?.message;
+				requestMessageCls.value = "error-message";
+			} else {
+				requestMessage.value = "Product added successfully";
+				requestMessageCls.value = "success-message";
+			}
+
+			setTimeout(() => {
+				requestMessage.value = "";
+			}, 3000);
 		})
 		.catch((err) => {
 			console.error("Error:", err.response?.data || err);
@@ -62,29 +100,31 @@ const closeWindow = () => {};
 		style="height: 100vh"
 	>
 		<v-card class="pa-4" width="400">
-			PRODUCT_ID:-{{ pId }}<br />
-			PRODUCT_TITLE:-{{ productTitle }}<br />
 			<VForm @submit.prevent="handleSubmit" ref="formRef">
+				<p :class="requestMessageCls">{{ requestMessage }}</p>
 				<VRow>
 					<VCol cols="12">
 						<VTextField
-							v-model="formData.productId"
+							v-model="formData.productUrl"
 							label="Enter product url"
 							type="input"
 							:rules="[requiredValidator]"
 						></VTextField>
 					</VCol>
+					<VCol cols="12">
+						<VSelect
+							:items="items"
+							v-model="formData.productType"
+							item-title="title"
+							item-value="value"
+							placeholder="Select an option"
+						>
+						</VSelect>
+					</VCol>
 				</VRow>
 				<!-- Update and Cancel Button -->
 				<VCardActions class="pt-4">
 					<VSpacer></VSpacer>
-					<!-- <VBtn
-						variant="tonal"
-						color="secondary"
-						@click="closeWindow"
-						size="small"
-						>Cancel</VBtn
-					> -->
 					<VBtn
 						:loading="isLoading"
 						type="submit"
@@ -95,47 +135,18 @@ const closeWindow = () => {};
 					>
 				</VCardActions>
 			</VForm>
-			<!-- shows products detail -->
-			<!-- <v-table>
-				<thead>
-					<tr>
-						<th class="text-left">Product information</th>
-						<th class="text-left">Value</th>
-					</tr>
-				</thead>
-				<tbody>
-					<tr>
-						<td>Product id</td>
-						<td>{{ productInfo?.productId }}</td>
-					</tr>
-					<tr>
-						<td>Title</td>
-						<td>{{ productInfo?.title }}</td>
-					</tr>
-					<tr>
-						<td>Image</td>
-						<td>
-							<VImg
-								class="py-4 px-4"
-								width="200"
-								height="200"
-								:src="productInfo?.imageUrls['200x200']"
-							></VImg>
-						</td>
-					</tr>
-					<tr>
-						<td>Affilate url</td>
-						<td>
-							<a
-								:href="productInfo?.productUrl"
-								target="_blank"
-								rel="noopener"
-								>Go to product</a
-							>
-						</td>
-					</tr>
-				</tbody>
-			</v-table> -->
 		</v-card>
 	</v-container>
 </template>
+
+<style scoped>
+.success-message {
+	color: green;
+	font-weight: bold;
+}
+
+.error-message {
+	color: red;
+	font-weight: bold;
+}
+</style>
