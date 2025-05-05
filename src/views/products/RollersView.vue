@@ -1,13 +1,15 @@
 <script setup>
+import { useRollersStore } from "@/stores/RollersStore";
+import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
-const goToProductDetail = () => {
-	router.push(route.fullPath + "/12345");
+const goToProductDetail = (product) => {
+	router.push(route.fullPath + "/" + product._id);
 };
-const products = [
+/* const products = [
 	{ name: "Lifelong Ab Wheel Roller 1", price: "$10" },
 	{ name: "Lifelong Ab Wheel Roller 2", price: "$20" },
 	{ name: "Lifelong Ab Wheel Roller 3", price: "$30" },
@@ -33,13 +35,21 @@ const products = [
 	{ name: "Lifelong Ab Wheel Roller 23", price: "$50" },
 	{ name: "Lifelong Ab Wheel Roller 24", price: "$60" },
 	{ name: "Lifelong Ab Wheel Roller 25", price: "$60" },
-];
+]; */
+
+const rollersStore = useRollersStore();
+
+onMounted(async () => {
+	if (!rollersStore.loaded) {
+		await rollersStore.fetchRollers();
+	}
+});
 </script>
 
 <template>
 	<div class="px-0 px-md-15">
 		<v-container fluid class="px-3 px-md-5">
-			<v-row>
+			<!-- <v-row>
 				<v-col>
 					<v-img
 						class="rounded"
@@ -48,11 +58,11 @@ const products = [
 						cover
 					/>
 				</v-col>
-			</v-row>
+			</v-row> -->
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
-					v-for="(product, index) in products"
+					v-for="(product, index) in rollersStore.rollers"
 					:key="index"
 					cols="12"
 					sm="6"
@@ -62,24 +72,23 @@ const products = [
 					<v-card class="pa-0 h-100 elevation-0">
 						<div class="productImg">
 							<v-img
-								src="https://m.media-amazon.com/images/I/41ASLBZg93L._SX300_SY300_QL70_FMwebp_.jpg"
+								:src="product.image_urls[0]"
 								class="mx-auto"
 							/>
 						</div>
 						<div class="px-4 py-2 productInfo">
-							<p class="proName text-grey">Lifelong</p>
+							<p class="proName text-grey">{{ product.brand }}</p>
 							<p class="proName">
-								Ninja Woodfire Electric BBQ Grill & Smoker
-								OG701UK
+								{{ product.title }}
 							</p>
 							<p class="mb-2">
 								<span
 									class="oldPirce text-decoration-line-through"
-									>₹177</span
+									>₹{{ product.price.max_price }}</span
 								>
 								<span
 									class="price d-inline-block ms-3 font-weight-bold"
-									>₹209</span
+									>₹{{ product.price.flipkart }}</span
 								>
 							</p>
 							<v-btn

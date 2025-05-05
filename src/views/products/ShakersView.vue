@@ -8,11 +8,11 @@ const route = useRoute();
 
 const shakersStore = useShakersStore();
 
-const goToProductDetail = () => {
-	router.push(route.fullPath + "/12345");
+const goToProductDetail = (product) => {
+	router.push(route.fullPath + "/" + product._id);
 };
 
-const products = [
+/* const products = [
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 1", price: "$10" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 2", price: "$20" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 3", price: "$30" },
@@ -38,7 +38,7 @@ const products = [
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 23", price: "$50" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 24", price: "$60" },
 	{ name: "Boldfit Plastic Gym Typhoon Shaker 25", price: "$60" },
-];
+]; */
 
 onMounted(async () => {
 	if (!shakersStore.loaded) {
@@ -50,16 +50,16 @@ onMounted(async () => {
 <template>
 	<div class="px-0 px-md-15">
 		<v-container fluid class="px-3 px-md-5">
-			<v-row>
+			<!-- <v-row>
 				<v-col>
 					<v-img
 						class="rounded"
-						src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
+						:src="https://buykaro.com/cdn/shop/collections/Audio.jpg?v=1730706001"
 						alt="Profile"
 						cover
 					/>
 				</v-col>
-			</v-row>
+			</v-row> -->
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
@@ -73,7 +73,7 @@ onMounted(async () => {
 					<v-card class="pa-0 h-100 elevation-0">
 						<div class="productImg">
 							<v-img
-								src="https://m.media-amazon.com/images/I/31cHRGL5BdL._SX300_SY300_QL70_FMwebp_.jpg"
+								:src="product.image_urls[0]"
 								class="mx-auto"
 							/>
 						</div>
@@ -85,11 +85,11 @@ onMounted(async () => {
 							<p class="mb-2">
 								<span
 									class="oldPirce text-decoration-line-through"
-									>₹177</span
+									>₹{{ product.price.max_price }}</span
 								>
 								<span
 									class="price d-inline-block ms-3 font-weight-bold"
-									>₹209</span
+									>₹{{ product.price.flipkart }}</span
 								>
 							</p>
 							<v-btn

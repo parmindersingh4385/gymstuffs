@@ -1,13 +1,15 @@
 <script setup>
+import { useGlovesStore } from "@/stores/GlovesStore";
+import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
 const goToProductDetail = (product) => {
-	router.push(route.fullPath + "/12345");
+	router.push(route.fullPath + "/" + product._id);
 };
-const products = [
+/* const products = [
 	{
 		name: "Boldfit Gym Gloves for Men & Women with Wrist Support 1",
 		price: "$10",
@@ -108,13 +110,21 @@ const products = [
 		name: "Boldfit Gym Gloves for Men & Women with Wrist Support 25",
 		price: "$60",
 	},
-];
+]; */
+
+const glovesStore = useGlovesStore();
+
+onMounted(async () => {
+	if (!glovesStore.loaded) {
+		await glovesStore.fetchGloves();
+	}
+});
 </script>
 
 <template>
 	<div class="px-0 px-md-15">
 		<v-container fluid class="px-3 px-md-5">
-			<v-row>
+			<!-- <v-row>
 				<v-col class="innerBanner">
 					<v-img
 						class="rounded"
@@ -123,11 +133,11 @@ const products = [
 						cover
 					/>
 				</v-col>
-			</v-row>
+			</v-row> -->
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
-					v-for="(product, index) in products"
+					v-for="(product, index) in glovesStore.gloves"
 					:key="index"
 					cols="12"
 					sm="6"
@@ -137,24 +147,23 @@ const products = [
 					<v-card class="pa-0 h-100 elevation-0">
 						<div class="productImg">
 							<v-img
-								src="https://m.media-amazon.com/images/I/51rdG3tKnUL._SX300_SY300_QL70_FMwebp_.jpg"
+								:src="product.image_urls[0]"
 								class="mx-auto"
 							/>
 						</div>
 						<div class="px-4 py-2 productInfo">
-							<p class="proName text-grey">Lifelong</p>
+							<p class="proName text-grey">{{ product.brand }}</p>
 							<p class="proName">
-								Ninja Woodfire Electric BBQ Grill & Smoker
-								OG701UK
+								{{ product.title }}
 							</p>
 							<p class="mb-2">
 								<span
 									class="oldPirce text-decoration-line-through"
-									>₹177</span
+									>₹{{ product.price.max_price }}</span
 								>
 								<span
 									class="price d-inline-block ms-3 font-weight-bold"
-									>₹209</span
+									>₹{{ product.price.flipkart }}</span
 								>
 							</p>
 							<v-btn

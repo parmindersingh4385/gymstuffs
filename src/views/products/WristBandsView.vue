@@ -1,11 +1,13 @@
 <script setup>
+import { useWristBandsStore } from "@/stores/WristBandsStore";
+import { onMounted } from "vue";
 import { useRoute, useRouter } from "vue-router";
 
 const router = useRouter();
 const route = useRoute();
 
-const goToProductDetail = () => {
-	router.push(route.fullPath + "/12345");
+const goToProductDetail = (product) => {
+	router.push(route.fullPath + "/" + product._id);
 };
 
 const products = [
@@ -110,12 +112,20 @@ const products = [
 		price: "$60",
 	},
 ];
+
+const wristBandsStore = useWristBandsStore();
+
+onMounted(async () => {
+	if (!wristBandsStore.loaded) {
+		await wristBandsStore.fetchWristBands();
+	}
+});
 </script>
 
 <template>
 	<div class="px-0 px-md-15">
 		<v-container fluid class="px-3 px-md-5">
-			<v-row>
+			<!-- <v-row>
 				<v-col>
 					<v-img
 						class="rounded"
@@ -124,11 +134,11 @@ const products = [
 						cover
 					/>
 				</v-col>
-			</v-row>
+			</v-row> -->
 			<v-row>
 				<v-col
 					class="position-relative custom-col"
-					v-for="(product, index) in products"
+					v-for="(product, index) in wristBandsStore.wristbands"
 					:key="index"
 					cols="12"
 					sm="6"
@@ -138,24 +148,23 @@ const products = [
 					<v-card class="pa-0 h-100 elevation-0">
 						<div class="productImg">
 							<v-img
-								src="https://m.media-amazon.com/images/I/71aQ+1SzYTL._SX569_.jpg"
+								:src="product.image_urls[0]"
 								class="mx-auto"
 							/>
 						</div>
 						<div class="px-4 py-2 productInfo">
-							<p class="proName text-grey">Lifelong</p>
+							<p class="proName text-grey">{{ product.brand }}</p>
 							<p class="proName">
-								Ninja Woodfire Electric BBQ Grill & Smoker
-								OG701UK
+								{{ product.title }}
 							</p>
 							<p class="mb-2">
 								<span
 									class="oldPirce text-decoration-line-through"
-									>₹177</span
+									>₹{{ product.price.max_price }}</span
 								>
 								<span
 									class="price d-inline-block ms-3 font-weight-bold"
-									>₹209</span
+									>₹{{ product.price.flipkart }}</span
 								>
 							</p>
 							<v-btn
