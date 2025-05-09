@@ -116,8 +116,8 @@ const products = [
 const wristBandsStore = useWristBandsStore();
 
 onMounted(async () => {
-	if (!wristBandsStore.loaded) {
-		await wristBandsStore.fetchWristBands();
+	if (!wristBandsStore.isLoaded) {
+		await wristBandsStore.fetchProducts();
 	}
 });
 </script>

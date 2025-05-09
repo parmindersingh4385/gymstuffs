@@ -41,8 +41,8 @@ const goToProductDetail = (product) => {
 ]; */
 
 onMounted(async () => {
-	if (!shakersStore.loaded) {
-		await shakersStore.fetchShakers();
+	if (!shakersStore.isLoaded) {
+		await shakersStore.fetchProducts();
 	}
 });
 </script>

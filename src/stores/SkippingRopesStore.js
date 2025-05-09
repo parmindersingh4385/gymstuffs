@@ -4,21 +4,21 @@ import axios from "axios";
 export const useSkippingRopesStore = defineStore("skippingRopes", {
 	state: () => ({
 		skippingRopes: [],
-		loaded: false,
+		isLoaded: false,
 	}),
 
 	actions: {
-		async fetchSkippingRopes() {
-			this.loading = true;
-
+		async fetchProducts() {
 			try {
 				const response = await axios.get(
 					"https://gymstuffsapi-production.up.railway.app/api/products/skippingropes",
 				);
 
 				this.skippingRopes = response.data.data;
+
+				this.isLoaded = true;
 			} catch (err) {
-				this.loaded = true;
+				this.isLoaded = true;
 			}
 		},
 	},

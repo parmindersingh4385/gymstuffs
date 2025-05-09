@@ -116,8 +116,8 @@ const products = [
 const skippingRopesStore = useSkippingRopesStore();
 
 onMounted(async () => {
-	if (!skippingRopesStore.loaded) {
-		await skippingRopesStore.fetchSkippingRopes();
+	if (!skippingRopesStore.isLoaded) {
+		await skippingRopesStore.fetchProducts();
 	}
 });
 </script>

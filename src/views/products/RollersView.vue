@@ -40,8 +40,8 @@ const goToProductDetail = (product) => {
 const rollersStore = useRollersStore();
 
 onMounted(async () => {
-	if (!rollersStore.loaded) {
-		await rollersStore.fetchRollers();
+	if (!rollersStore.isLoaded) {
+		await rollersStore.fetchProducts();
 	}
 });
 </script>

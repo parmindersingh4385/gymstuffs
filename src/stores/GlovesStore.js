@@ -4,21 +4,20 @@ import axios from "axios";
 export const useGlovesStore = defineStore("gloves", {
 	state: () => ({
 		gloves: [],
-		loaded: false,
+		isLoaded: false,
 	}),
 
 	actions: {
-		async fetchGloves() {
-			this.loading = true;
-
+		async fetchProducts() {
 			try {
 				const response = await axios.get(
 					"https://gymstuffsapi-production.up.railway.app/api/products/gloves",
 				);
 
 				this.gloves = response.data.data;
+				this.isLoaded = true;
 			} catch (err) {
-				this.loaded = true;
+				this.isLoaded = true;
 			}
 		},
 	},

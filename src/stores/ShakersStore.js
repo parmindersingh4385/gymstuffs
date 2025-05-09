@@ -4,21 +4,20 @@ import axios from "axios";
 export const useShakersStore = defineStore("shakers", {
 	state: () => ({
 		shakers: [],
-		loaded: false,
+		isLoaded: false,
 	}),
 
 	actions: {
-		async fetchShakers() {
-			this.loading = true;
-
+		async fetchProducts() {
 			try {
 				const response = await axios.get(
 					"https://gymstuffsapi-production.up.railway.app/api/products/shakers",
 				);
 
 				this.shakers = response.data.data;
+				this.isLoaded = true;
 			} catch (err) {
-				this.loaded = true;
+				this.isLoaded = true;
 			}
 		},
 	},

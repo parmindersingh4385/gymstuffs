@@ -115,8 +115,8 @@ const goToProductDetail = (product) => {
 const glovesStore = useGlovesStore();
 
 onMounted(async () => {
-	if (!glovesStore.loaded) {
-		await glovesStore.fetchGloves();
+	if (!glovesStore.isLoaded) {
+		await glovesStore.fetchProducts();
 	}
 });
 </script>

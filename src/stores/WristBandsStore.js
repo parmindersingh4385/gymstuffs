@@ -4,21 +4,21 @@ import axios from "axios";
 export const useWristBandsStore = defineStore("wristbands", {
 	state: () => ({
 		wristbands: [],
-		loaded: false,
+		isLoaded: false,
 	}),
 
 	actions: {
-		async fetchWristBands() {
-			this.loading = true;
-
+		async fetchProducts() {
 			try {
 				const response = await axios.get(
 					"https://gymstuffsapi-production.up.railway.app/api/products/wristbands",
 				);
 
 				this.wristbands = response.data.data;
+
+				this.isLoaded = true;
 			} catch (err) {
-				this.loaded = true;
+				this.isLoaded = true;
 			}
 		},
 	},
