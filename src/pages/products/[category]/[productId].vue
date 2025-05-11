@@ -118,11 +118,12 @@ const goToAffilateUrl = (affilateUrl) => {
 		<VBreadcrumbs :items="breadCrumbItems" class="text-truncate px-0" />
 		<v-row>
 			<v-col cols="12" md="5">
-				<div class="border pa-4 rounded-lg">
+				<div class="border pa-4 rounded-lg detailLargeImg">
 					<v-img
 						:src="productRecord?.image_urls[2]"
 						alt="Profile"
 						class="responsive-img mx-auto"
+						
 					/>
 				</div>
 			</v-col>
@@ -179,3 +180,9 @@ const goToAffilateUrl = (affilateUrl) => {
 		</v-row>
 	</v-container>
 </template>
+<style scoped>
+.detailLargeImg{
+	width:100%;
+	height: 500px;
+}
+</style>
