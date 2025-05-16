@@ -38,6 +38,13 @@ const productRecord = ref(null);
 
 const breadCrumbItems = ref([]);
 
+const isImageLoaded = ref(false);
+
+const onImageLoad = () => {
+	console.log("onImageLoad.....................");
+	isImageLoaded.value = true;
+};
+
 onMounted(async () => {
 	if (!storeRef.isLoaded) {
 		await storeRef.fetchProducts();
@@ -119,11 +126,11 @@ const goToAffilateUrl = (affilateUrl) => {
 		<v-row>
 			<v-col cols="12" md="5">
 				<div class="border pa-4 rounded-lg detailLargeImg">
-					<v-img
+					<img
 						:src="productRecord?.image_urls[2]"
 						alt="Profile"
-						class="responsive-img mx-auto"
-						
+						@load="onImageLoad"
+						class="imageSize"
 					/>
 				</div>
 			</v-col>
@@ -181,8 +188,14 @@ const goToAffilateUrl = (affilateUrl) => {
 	</v-container>
 </template>
 <style scoped>
-.detailLargeImg{
-	width:100%;
+.detailLargeImg {
+	width: 100%;
 	height: 500px;
+}
+.imageSize {
+	width: 450px;
+	height: 450px;
+	object-fit: cover; /* fill and crop */
+	object-fit: contain; /* fit within container without cropping */
 }
 </style>
