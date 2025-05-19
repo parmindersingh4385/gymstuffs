@@ -121,69 +121,82 @@ const goToAffilateUrl = (affilateUrl) => {
 </script>
 
 <template>
-	<v-container v-if="productRecord" fluid class="px-3 px-md-5 pt-0">
-		<VBreadcrumbs :items="breadCrumbItems" class="text-truncate px-0" />
-		<v-row>
-			<v-col cols="12" md="5">
-				<div class="border pa-4 rounded-lg detailLargeImg">
-					<img
-						:src="productRecord?.image_urls[2]"
-						alt="Profile"
-						@load="onImageLoad"
-						class="imageSize"
-					/>
-				</div>
-			</v-col>
-			<v-col cols="12" md="7">
-				<div class="mb-5">{{ productRecord?.title }}</div>
-				<v-row>
-					<v-col cols="12" md="6">
-						<div class="border pa-4 rounded-lg bg-grey-lighten-5">
-							<v-img
-								style="width: 150px"
-								src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
-							/>
-							<div class="font-weight-bold mb-3">
-								Discounted Price
-								<span class="text-h5 font-weight-bold"
-									>₹2,701
-								</span>
-							</div>
-							<VBtn
-								variant="flat"
-								color="primary"
-								class="rounded-lg"
-								>Grab Deal</VBtn
+	<div class="px-0 px-md-15">
+		<div
+			v-if="!productRecord"
+			class="d-flex justify-center align-center"
+			style="height: 90vh"
+		>
+			<v-progress-circular indeterminate color="primary" size="48" />
+		</div>
+		<v-container v-if="productRecord" fluid class="px-3 px-md-5 pt-0">
+			<VBreadcrumbs :items="breadCrumbItems" class="text-truncate px-0" />
+			<v-row>
+				<v-col cols="12" md="5">
+					<div class="border pa-4 rounded-lg detailLargeImg">
+						<img
+							:src="productRecord?.image_urls[2]"
+							alt="Profile"
+							@load="onImageLoad"
+							class="imageSize"
+						/>
+					</div>
+				</v-col>
+				<v-col cols="12" md="7">
+					<div class="mb-5">{{ productRecord?.title }}</div>
+					<v-row>
+						<v-col cols="12" md="6">
+							<div
+								class="border pa-4 rounded-lg bg-grey-lighten-5"
 							>
-						</div>
-					</v-col>
-					<v-col cols="12" md="6">
-						<div class="border pa-4 rounded-lg bg-grey-lighten-5">
-							<v-img
-								style="width: 150px"
-								src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
-							/>
-							<div class="font-weight-bold mb-3">
-								Discounted Price
-								<span class="text-h5 font-weight-bold"
-									>₹{{ productRecord.price.flipkart }}
-								</span>
+								<v-img
+									style="width: 150px"
+									src="https://asset20.ckassets.com/resources/image/stores/amazon-1735629515.jpg"
+								/>
+								<div class="font-weight-bold mb-3">
+									Discounted Price
+									<span class="text-h5 font-weight-bold"
+										>₹2,701
+									</span>
+								</div>
+								<VBtn
+									variant="flat"
+									color="primary"
+									class="rounded-lg"
+									>Grab Deal</VBtn
+								>
 							</div>
-							<VBtn
-								variant="flat"
-								color="primary"
-								class="rounded-lg"
-								@click="
-									goToAffilateUrl(
-										productRecord.affilate_url.flipkart,
-									)
-								"
-								>Grab Deal</VBtn
+						</v-col>
+						<v-col cols="12" md="6">
+							<div
+								class="border pa-4 rounded-lg bg-grey-lighten-5"
 							>
-						</div>
-					</v-col>
-				</v-row>
-			</v-col>
-		</v-row>
-	</v-container>
+								<v-img
+									style="width: 150px"
+									src="https://asset20.ckassets.com/resources/image/stores/flipkart.png"
+								/>
+								<div class="font-weight-bold mb-3">
+									Discounted Price
+									<span class="text-h5 font-weight-bold"
+										>₹{{ productRecord.price.flipkart }}
+									</span>
+								</div>
+								<VBtn
+									variant="flat"
+									color="primary"
+									class="rounded-lg"
+									@click="
+										goToAffilateUrl(
+											productRecord.affilate_url.flipkart,
+										)
+									"
+									>Grab Deal</VBtn
+								>
+							</div>
+						</v-col>
+					</v-row>
+				</v-col>
+			</v-row>
+		</v-container>
+	</div>
 </template>
