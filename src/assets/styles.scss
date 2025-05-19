@@ -89,6 +89,18 @@
 	width: 450px;
 	height: auto;
 }
+.detailLargeImg {
+	width: 100%;
+	height: 500px;
+	text-align: center;
+	.imageSize {
+		width: 450px;
+		height: 450px;
+		object-fit: cover; /* fill and crop */
+		object-fit: contain; /* fit within container without cropping */
+		margin:0 auto;
+	}
+}
 
 /* ✅ 1024px - 1600px तक 4 columns */
 @media (min-width: 1024px) and (max-width: 1500px) {
@@ -125,6 +137,12 @@
 		.v-responsive__sizer,
 		.v-responsive {
 			height: 176px !important;
+		}
+	}
+	.detailLargeImg{
+		.imageSize{
+			width: 100%;
+			height: 100%;
 		}
 	}
 }

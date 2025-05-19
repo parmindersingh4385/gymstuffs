@@ -187,15 +187,3 @@ const goToAffilateUrl = (affilateUrl) => {
 		</v-row>
 	</v-container>
 </template>
-<style scoped>
-.detailLargeImg {
-	width: 100%;
-	height: 500px;
-}
-.imageSize {
-	width: 450px;
-	height: 450px;
-	object-fit: cover; /* fill and crop */
-	object-fit: contain; /* fit within container without cropping */
-}
-</style>
