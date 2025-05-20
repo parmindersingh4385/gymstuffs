@@ -24,7 +24,7 @@ onMounted(async () => {
 		<div
 			v-if="glovesStore.gloves.length == 0"
 			class="d-flex justify-center align-center"
-			style="height: 60vh"
+			style="height: 70vh"
 		>
 			<v-progress-circular indeterminate color="primary" size="48" />
 		</div>

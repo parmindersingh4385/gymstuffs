@@ -125,7 +125,7 @@ const goToAffilateUrl = (affilateUrl) => {
 		<div
 			v-if="!productRecord"
 			class="d-flex justify-center align-center"
-			style="height: 90vh"
+			style="height: 80vh"
 		>
 			<v-progress-circular indeterminate color="primary" size="48" />
 		</div>
